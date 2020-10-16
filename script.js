@@ -11,23 +11,18 @@ let screenAdd = 0
 
 function preload(){
   console.log("in preload");
-  pianoMan = loadSound("Vicetone__Tony_Igy_-_Astronomia_1.mp3");
-  // organMusic = loadSound("organMusic.mp3");
-  // scream = loadSound ("scream.mp3");
+  pianoMan = loadSound("pianoMan.mp3");
   conroTherapy = loadSound("Conro - Therapy.mp3")
   caramellDansen = loadSound("Caramelldansen.mp3")
   porterRobinson = loadSound("Porter Robinson - Natural Light.mp3")
   pinkGuy = loadSound("PINK GUY - HELP.mp3")
-  // brian115 = loadSound("Brian Tuey - 115.mp3")
   neverGonna = loadSound("Rick Astley - Never Gonna Give You Up.mp3")
   attackOnTitan = loadSound("attackOnTitan.mp3");
   blackCatcher = loadSound("blackCatcher.mp3");
   unravel = loadSound("unravel.mp3");
   console.log("leaving preload");
   pattern = loadImage("pattern.jpg");
-  //backgroundz = loadImage("utsab.jpg")
   oor = loadImage("out of order.jpg")
-  //utsab = loadImage("UstabSaha.jpg")
 }
 
 function setup() {
@@ -133,7 +128,7 @@ function draw() {
   strokeWeight(2.5);
   drawJukebox();
   image(oor, 320, 230, 40, 30)
-  // image(utsab, 620, 135, 40, 40)
+  
 
   whichStateText();
   checkCoinAndLock();
@@ -261,7 +256,6 @@ function drawJukebox() {
   stopButtonFunct(stopButton);
   jukeboxFloor();
   drawBucket();
-
 }
 
 function mousePressed() {
@@ -342,12 +336,10 @@ function mousePressed() {
     button9.s.pause();
     console.log("paused");
     playing = false;
-    // text("paused", 20, 35)
   }
 
   else if (mouseX > stopButton.x && mouseX < stopButton.x+50 && mouseY > stopButton.y && mouseY < stopButton.y + 30 && (button1.s.isPlaying() || button2.s.isPlaying() || button3.s.isPlaying() || button4.s.isPlaying() || button5.s.isPlaying() || button6.s.isPlaying() || button7.s.isPlaying() || button8.s.isPlaying() || button9.s.isPlaying())) {
-    // for (let i = 0; i < 9; i++) 
-    // {button[i].s.stop()}
+
     button1.s.stop();
     button2.s.stop();
     button3.s.stop();
@@ -482,8 +474,6 @@ function visualizer() {
   fill(0, 0, 0, screenOnOff)
 
   rect(620, 255, 380, 255)
-
-  // text("screenOnOff", 50,20)
 
   fill(0, 0, 40);
   rect(600, 530, 50, 25);
